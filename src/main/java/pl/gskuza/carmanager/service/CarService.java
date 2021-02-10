@@ -27,17 +27,18 @@ public class CarService {
         return carRepo.save(car);
     }
 
-    public List<Car> findAllEmployees() {
+    public List<Car> findAllCars() {
         return carRepo.findAll();
     }
 
-    public Car updateEmployee(Car car) {
+    public Car updateCar(Car car) {
         return carRepo.save(car);
     }
 
-    public void deleteEmployee(Long id){
+    public void deleteCar(Long id){
         carRepo.deleteCarById(id);
     }
+
     public Car findCarById(Long id) {
         return carRepo.findCarById(id)
                 .orElseThrow(() -> new CarNotFoundException("Car by id " + id + " was not found"));
